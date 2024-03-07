@@ -1,0 +1,95 @@
+body {
+    overflow-y: scroll;
+}
+
+.container {
+    display: grid;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-rows: 80px 25px 25px 200px;
+    grid-auto-columns: 200px;
+    grid-template-areas: 
+        "title title title title"
+        "nav1 nav1 nav1 calendar"
+        "nav2 nav3 nav4 cal-res"
+        "verse1 verse1 dictionary dictionary"
+        "verse2 verse2 dictionary dictionary";
+    gap: 20px;
+    padding: 20px;
+    background-color: rgb(193, 193, 193);
+}
+
+#translationList {
+    grid-area: nav1;
+}
+
+#bookList {
+    grid-area: nav2;
+}
+
+#chapterList {
+    grid-area: nav3;
+}
+
+#verseList {
+    grid-area: nav4;
+}
+
+.header {
+    background-color: brown;
+    color: antiquewhite;
+    margin: 0 0 0 0;
+    padding-left: 2rem;
+    grid-area: title;
+    font-family: 'Roboto', sans-serif;
+}
+
+.button {
+    grid-area: calendar;
+}
+
+.calendarResponse {
+    grid-area: cal-res;
+}
+
+.calendarResponse p {
+    margin: 0 0 0 0;
+    font-size: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    align-content: center;
+    text-align: center;
+}
+
+.verse-1-display {
+    grid-area: verse1;
+    font-size: 1.5rem;
+    
+}
+
+.verse-2-display {
+    grid-area: verse2;
+    font-size: 1.5rem;
+    z-index: 200;
+    
+}
+
+.secondary-display {
+    grid-area: dictionary;
+    padding: 20px;
+    z-index: 100;
+    border: 1px solid black;
+}
+
+.open {
+    display: block !important;
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+    transition: opacity 100ms, transform 100ms ease-in;;
+}
+
+.close {
+    opacity: 0;
+    transform: translateX(1rem);
+    transition: opacity 100ms, transform 100ms ease-out;
+}

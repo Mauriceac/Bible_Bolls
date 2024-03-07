@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bible Verse Display</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body class="container">
+    <div class="header"><h1>Bible Verse Display</h1></div>
+    <button id="today" class="button">Today's Gospel</button>
+    <div class="calendarResponse">
+      <p id="todaysGospel"></p>
+    </div>
+    <select id="translationList" class="menu">
+      <option disabled selected>Select a translation</option>
+    </select>
+    <select id="bookList" class="menu">
+      <option disabled selected>Select a book</option>
+    </select>
+    <select id="chapterList" class="menu">
+      <option disabled selected>Select a chapter</option>
+    </select>
+    <select id="verseList" class="menu">
+      <option disabled selected>Select a verse</option>
+    </select>
+
+    <div class="verse-1-display">
+      <p id="originalText"></p>
+    </div>
+    <div class="secondary-display close">
+      <h3>Dictionary:</h3>
+      <h3 id="wordVariant"></h3>
+      <p id="definition"></p>
+    </div>
+    <div class="verse-2-display">
+      <p id="verseText"></p>
+    </div>
+
+    <script src="scripts/calendar.js"></script>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
