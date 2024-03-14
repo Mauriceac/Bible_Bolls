@@ -7,7 +7,9 @@ document.getElementById("today").addEventListener("click", async function () {
     response.text()
   ); // Use await here
   const data = JSON.parse(result);
-  const gospel = data.readings[1].display;
+  const gospel = data.readings.find(
+    (reading) => reading.source === "Gospel" && reading.description === ""
+  ).display;
 
   // Split the gospel string into book, chapter, and verses
   var parts = gospel.split(" ");
@@ -26,7 +28,7 @@ document.getElementById("today").addEventListener("click", async function () {
       bookId = 43;
       break;
     default:
-      console.log("Book not found");
+      alert("Book not found");
       break;
   }
 
@@ -61,5 +63,4 @@ document.getElementById("today").addEventListener("click", async function () {
     setOptions("chapterList", chapter);
     setOptions("verseList", verse);
   }
-
 });

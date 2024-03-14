@@ -4,20 +4,24 @@ body {
 
 .container {
     display: grid;
-    width: 800px;
+    width: 1600px;
     margin-left: auto;
     margin-right: auto;
-    grid-template-rows: 80px 25px 25px 200px;
-    grid-auto-columns: 200px;
+    grid-template-rows: 80px 25px 25px;
+    grid-auto-columns: 400px;
     grid-template-areas: 
         "title title title title"
-        "nav1 nav1 nav1 calendar"
+        "nav0 nav1 nav1 calendar"
         "nav2 nav3 nav4 cal-res"
-        "verse1 verse1 dictionary dictionary"
-        "verse2 verse2 dictionary dictionary";
+        "verse2 verse1 dictionary dictionary"
+        "verse2 verse1 dictionary dictionary";
     gap: 20px;
     padding: 20px;
     background-color: rgb(193, 193, 193);
+}
+
+#languageList {
+    grid-area: nav0;
 }
 
 #translationList {
@@ -85,11 +89,11 @@ body {
     display: block !important;
     opacity: 1 !important;
     transform: translateX(0) !important;
-    transition: opacity 100ms, transform 100ms ease-in;;
+    transition: opacity 50ms, transform 50ms ease-in;;
 }
 
 .close {
     opacity: 0;
     transform: translateX(1rem);
-    transition: opacity 100ms, transform 100ms ease-out;
+    transition: opacity 50ms, transform 50ms ease-out;
 }

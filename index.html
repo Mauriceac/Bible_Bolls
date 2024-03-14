@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bible Verse Display</title>
     <link rel="stylesheet" href="styles/styles.css" />
+    <script src="scripts/calendar.js" defer></script>
+    <script src="scripts/script.js" defer></script>
   </head>
   <body class="container">
     <div class="header"><h1>Bible Verse Display</h1></div>
@@ -12,6 +14,9 @@
     <div class="calendarResponse">
       <p id="todaysGospel"></p>
     </div>
+    <select id="languageList" class="menu">
+      <option disabled selected>Select a language</option>
+    </select>
     <select id="translationList" class="menu">
       <option disabled selected>Select a translation</option>
     </select>
@@ -31,13 +36,11 @@
     <div class="secondary-display close">
       <h3>Dictionary:</h3>
       <h3 id="wordVariant"></h3>
+      <h5 id="strongNumberDisplay"></h5>
       <p id="definition"></p>
     </div>
     <div class="verse-2-display">
       <p id="verseText"></p>
     </div>
-
-    <script src="scripts/calendar.js"></script>
-    <script src="scripts/script.js"></script>
   </body>
 </html>
